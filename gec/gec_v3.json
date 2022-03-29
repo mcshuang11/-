@@ -1,0 +1,23 @@
+{
+  "model_name_or_path": "google/mt5-base",
+  "tokenizer_name": "google/mt5-base",
+  "text_column": "source",
+  "summary_column": "target",
+  "train_file": "/home/shuang.mo/bert4tf/bert4tf/data/gec/gec_v2/train_pig_v3_update.json",
+  "validation_file": "/home/shuang.mo/bert4tf/bert4tf/data/gec/gec_v2/dev.json",
+  "output_dir": "/home/shuang.mo/bert4tf/outputs/train_pig_v3_update",
+  "overwrite_output_dir": true,
+  "do_train": true,
+  "do_eval": true,
+  "source_prefix": "gec: ",
+  "predict_with_generate": true,
+  "per_device_train_batch_size": 8,
+  "per_device_eval_batch_size": 8,
+  "gradient_accumulation_steps": 32,
+  "learning_rate": 1e-3,
+  "num_train_epochs": 5,
+  "max_source_length": 128,
+  "max_target_length": 128,
+  "logging_steps": 100,
+  "seed": 42
+}
